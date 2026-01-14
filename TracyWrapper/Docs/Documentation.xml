@@ -34,6 +34,18 @@
             </summary>
             <param name="name">Display name</param>
         </member>
+        <member name="M:TracyWrapper.Profiler.HeartBeatStart(System.String)">
+            <summary>
+            Call to signal the start of a specific frame
+            </summary>
+            <param name="name">Display name</param>
+        </member>
+        <member name="M:TracyWrapper.Profiler.HeartBeatEnd(System.String)">
+            <summary>
+            Call to signal the end of a specific frame
+            </summary>
+            <param name="name">Display name</param>
+        </member>
         <member name="M:TracyWrapper.Profiler.RefreshConnectionStatus">
             <summary>
             Check if we are connected.

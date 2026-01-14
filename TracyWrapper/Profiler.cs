@@ -171,6 +171,28 @@ namespace TracyWrapper
             PInvoke.TracyEmitFrameMark(CString.FromString(name));
         }
 
+        /// <summary>
+        /// Call to signal the start of a specific frame
+        /// </summary>
+        /// <param name="name">Display name</param>
+        public static void HeartBeatStart(CString name)
+        {
+            if (!mEnabled) return;
+
+            PInvoke.TracyEmitFrameMarkStart(name);
+        }
+
+        /// <summary>
+        /// Call to signal the end of a specific frame
+        /// </summary>
+        /// <param name="name">Display name</param>
+        public static void HeartBeatEnd(CString name)
+        {
+            if (!mEnabled) return;
+
+            PInvoke.TracyEmitFrameMarkEnd(name);
+        }
+
 
         /// <summary>
         /// Check if we are connected.
